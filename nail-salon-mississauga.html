@@ -225,7 +225,78 @@ padding-top: 18px;
   </head>
 
   <body>
-    <header>header</header>
+    <header class="bg-white z-50 sticky top-0">
+      <!-- large device  -->
+      <nav class="hidden lg:block">
+        <div class="flex justify-between items-center py-1">
+          <!-- first div  -->
+          <div>
+            <p class="pl-[100px] flex items-center gap-2 text-[#A0153E] text-base font-medium"><img src="/images/canada.png" alt="canada logo"> Best Nail Salon in Mississauga</p>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="709" height="18" viewBox="0 0 709 18" fill="none">
+              <path d="M708.574 9L699.914 0.339746L691.254 9L699.914 17.6603L708.574 9ZM-0.0859375 10.5H699.914V7.5H-0.0859375V10.5Z" fill="#C7A43C"/>
+            </svg> -->
+            <div class="w-[400px] h-[3px] bg-[#C7A43C] my-4"></div>
+            <ul class="pl-[100px] flex justify-between text-lg font-semibold text-black cursor-pointer">
+              <li>About</li>
+              <li>Services</li>
+              <li>Book Now</li>
+            </ul>
+          </div>
+          <!-- second div  -->
+          <div>
+            <img class="h-[97px] w-auto" src="/images/nav__logo.png" alt="nav__logo">
+          </div>
+          <!-- third div  -->
+          <div>
+            <span class="pr-[100px] flex">
+              <p class="text-[#A0153E] font-semibold text-sm">Follow Us:</p>
+            <img class="w-[26px] h-[26px] cursor-pointer mx-[30px]" src="/images/f.png" alt="facebook">
+            <img class="w-[26px] h-[26px] cursor-pointer" src="/images/x.png" alt="x">
+            <img class="w-[26px] h-[26px] cursor-pointer mx-[30px]" src="/images/i.png" alt="instragram">
+            <img class="w-[26px] h-[26px] cursor-pointer" src="/images/l.png" alt="linkedin">
+            <img class="w-[26px] h-[26px] cursor-pointer ml-[30px]" src="/images/g.png" alt="google">
+            </span>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="709" height="18" viewBox="0 0 709 18" fill="none">
+              <path d="M0.339746 9L9 17.6603L17.6603 9L9 0.339746L0.339746 9ZM9 10.5H709V7.5H9V10.5Z" fill="#C7A43C"/>
+            </svg> -->
+            <div class="w-[450px] h-[3px] bg-[#C7A43C] my-4"></div>
+            <div class="pr-[100px]">
+              <ul class="flex items-center justify-between text-lg font-semibold text-black cursor-pointer">
+                <li>Gallery</li>
+                <li>Contact Us</li>
+                <li class="flex items-center gap-2 bg-[#A0153E] text-white py-2 px-3 rounded-[14px]"><img class="w-[23px] h-[23px]" src="/images/p.png" alt="phone icon"> (905) 973-6669</li>
+              </ul>
+              
+            </div>
+            
+          </div>
+        </div>
+      </nav>
+
+      <!-- small device  -->
+       <nav class="block lg:hidden">
+          <div class="px-[50px]">
+            <div>
+              <p class="flex items-center justify-center gap-2 text-[#A0153E] text-sm font-medium"><img src="/images/canada.png" alt="canada logo"> Best Nail Salon in Mississauga</p>
+            </div>
+            <div class="flex justify-between">
+              <span class="w-[100px] sm:w-[200px] md:w-[300px] h-[3px] bg-[#C7A43C] my-4"></span>
+              <span class="w-[100px] sm:w-[200px] md:w-[300px] h-[3px] bg-[#C7A43C] my-4"></span>
+            </div>
+            <div class="flex justify-between items-center">
+              <button class="bg-[#A0153E] text-white py-2 px-3 rounded-[12px] text-sm font-semibold">Get an Estimated</button>
+              <button class="flex items-center gap-2 bg-[#A0153E] text-white py-2 px-3 rounded-[12px] text-sm font-semibold"><img class="w-[15px] h-[15px] mt-1" src="/images/p.png" alt="phone icon"> (905) 973-6669</button>
+              <span>
+                <img src="/images/sm_menu_icon.png" alt="menu icon">
+              </span>
+            </div>
+            <div class="my-3 pb-2">
+              <img class="h-[61px] w-auto mx-auto" src="/images/sm_nav_logo.png" alt="nav logo">
+            </div>
+          </div>
+       </nav>
+
+    </header>
     <main class="">
 
       <!-- banner/hero section  -->
@@ -235,7 +306,7 @@ padding-top: 18px;
             <div class="">
               <div class="banner_images flex flex-col justify-center items-center">
                 <div>
-                  <div class="w-1/2">
+                  <div class="w-full md:w-1/2">
                     <h1 class="text-[50px] font-normal primary_color">Lavish Lux Nails & Spa - <br> 
                       Best Nail Salon in Mississauga</h1>
                       <p class="text-lg font-normal text-white">Experience the best nail salon in Mississauga at Lavish Lux Nails & Spa. Expert manicures, pedicures, nail art, and more. Book online now!</p>
@@ -562,7 +633,7 @@ padding-top: 18px;
                 />
               </div>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-10 sm:gap-40">
+            <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-10 sm:gap-[80px]">
               <div class="md:col-span-3 flex justify-center">
                 <img
                   class="w-full max-w-[1047px] h-auto"
@@ -571,31 +642,63 @@ padding-top: 18px;
                 />
               </div>
               <!-- large device  -->
-              <div class="hidden sm:block md:col-span-3">
-                <div class="flex  gap-6">
+              <div class="hidden md:block md:col-span-3">
+                <div class="flex gap-6">
                   <div class="mt-[50px]">
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa1.png" alt="spa1">
-                    <img class="our__service__bg w-[126px] h-[126px] my-[24px]" src="/images/spa2.png" alt="spa2">
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa3.png" alt="spa3">
+                    <div class="our__service__bg">
+                      <img class=" w-[126px] h-[126px] mx-auto" src="/images/spa1.png" alt="spa1">
+                      <p class="text-black text-center text-3xl font-normal">Pedicure</p>
+                    </div>
+                    <div class="our__service__bg my-[24px]">
+                      <img class="w-[126px] h-[126px] mx-auto " src="/images/spa2.png" alt="spa2">
+                      <p class="text-black text-center text-3xl font-normal">Artificial <br> Nails</p>
+                    </div>
+                    <div class="our__service__bg">
+                      <img class="w-[126px] h-[126px] mx-auto" src="/images/spa3.png" alt="spa3">
+                      <p class="text-black text-center text-3xl font-normal">Additional <br> Services</p>
+                    </div>
                   </div>
                   <div>
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa4.png" alt="spa4">
-                    <img class="our__service__bg w-[126px] h-[126px] my-[24px]" src="/images/spa5.png" alt="spa5">
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa6.png" alt="spa6">
+                    <div class="our__service__bg">
+                      <img class="w-[126px] h-[126px]" src="/images/spa4.png" alt="spa4">
+                      <p class="text-black text-center text-3xl font-normal">Manicure</p>
+                    </div>
+                    <div class="our__service__bg my-[24px]">
+                      <img class="w-[126px] h-[126px] " src="/images/spa5.png" alt="spa5">
+                      <p class="text-black text-center text-3xl font-normal">Waxing</p>
+                    </div>
+                    <div class="our__service__bg">
+                      <img class="w-[126px] h-[126px]" src="/images/spa6.png" alt="spa6">
+                      <p class="text-black text-center text-3xl font-normal">Design</p>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- small device  -->
-              <div class="block sm:hidden md:col-span-3">
-                <div class="flex justify-center gap-6">
-                  <div class="">
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa1.png" alt="spa1">
-                    <img class="our__service__bg w-[126px] h-[126px] my-[24px]" src="/images/spa2.png" alt="spa2">
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa3.png" alt="spa3">
-                    <img class="our__service__bg w-[126px] h-[126px] my-[24px]" src="/images/spa4.png" alt="spa4">
-                    <img class="our__service__bg w-[126px] h-[126px] mb-[24px]" src="/images/spa5.png" alt="spa5">
-                    <img class="our__service__bg w-[126px] h-[126px]" src="/images/spa6.png" alt="spa6">
-                  </div>
+              <div class="block md:hidden md:col-span-3">
+                <div class="our__service__bg">
+                  <img class=" w-[126px] h-[126px] mx-auto" src="/images/spa1.png" alt="spa1">
+                  <p class="text-black text-center text-3xl font-normal">Pedicure</p>
+                </div>
+                <div class="our__service__bg my-[24px]">
+                  <img class="w-[126px] h-[126px] mx-auto " src="/images/spa2.png" alt="spa2">
+                  <p class="text-black text-center text-3xl font-normal">Artificial Nails</p>
+                </div>
+                <div class="our__service__bg">
+                  <img class="w-[126px] h-[126px] mx-auto" src="/images/spa3.png" alt="spa3">
+                  <p class="text-black text-center text-3xl font-normal">Additional Services</p>
+                </div>
+                <div class="our__service__bg my-[24px]">
+                  <img class="w-[126px] h-[126px] mx-auto" src="/images/spa4.png" alt="spa4">
+                  <p class="text-black text-center text-3xl font-normal">Manicure</p>
+                </div>
+                <div class="our__service__bg">
+                  <img class="w-[126px] h-[126px] mx-auto " src="/images/spa5.png" alt="spa5">
+                  <p class="text-black text-center text-3xl font-normal">Waxing</p>
+                </div>
+                <div class="our__service__bg mt-[24px]">
+                  <img class="w-[126px] h-[126px] mx-auto" src="/images/spa6.png" alt="spa6">
+                  <p class="text-black text-center text-3xl font-normal">Design</p>
                 </div>
               </div>
             </div>
@@ -910,9 +1013,9 @@ padding-top: 18px;
             </div>
 
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-7 ">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-7 ">
             <img class="w-[485px] h-[494px]" src="/images/gallery6.png" alt="gallery6">
-            <img class="w-[832px] h-[494px]" src="/images/gallery8.png" alt="gallery8">
+            <img class="col-span-2 w-[832px] h-[494px]" src="/images/gallery8.png" alt="gallery8">
             <img class="w-[551px] h-[494px]" src="/images/gallery7.png" alt="gallery7">
           </div>
         </div>
@@ -964,8 +1067,283 @@ padding-top: 18px;
           </div>
         </div>
       </section>
+
+       <!-- Review  -->
+       <section class="pt-[100px]">
+        <div class="">
+          <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-[24px]">
+            <div class="md:col-span-3">
+              <div class="h-full flex flex-col items-center md:items-start">
+                <div class="w-full flex items-center justify-center gap-4">
+                  <img src="/images/right-line.png" alt="right-line" />
+                  <h4
+                    class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                  >
+                  Review
+                  </h4>
+                  <img
+                    class="mt-2"
+                    src="/images/left-line.png"
+                    alt="left line"
+                  />
+                </div>
+              </div>
+              
+              <div class="px-4 md:px-[100px]">
+                <div class="px-[20px] swiper-container overflow-hidden  ">
+                  <div class="swiper-wrapper relative ">
+                    
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                      <p class="text-lg font-medium text-left text-black">Great place to relax and get pampered. Great service and professional staff. Highly recommend you come and experience this place.</p>
+                      <p class="text-base font-semibold text-black pt-[42px]">Sandra Serrao</p>
+                      <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Great atmosphere, staff, and service! Great place to be pampered! 👍
+                        Services <br>
+                        Pedicure, Manicure</p>
+                        <p class="text-base font-semibold text-black pt-[42px]">Jennifer Xuan</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Got manicure and pedicure done and they did an amazing job! Staff is very friendly and very detailed oriented.
+                        Services
+                        Pedicure, Manicure</p>
+                        <p class="text-base font-semibold text-black pt-[42px]">jay pat</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                      <p class="text-lg font-medium text-left text-black">Great place to relax and get pampered. Great service and professional staff. Highly recommend you come and experience this place.</p>
+                      <p class="text-base font-semibold text-black pt-[42px]">Sandra Serrao</p>
+                      <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Great atmosphere, staff, and service! Great place to be pampered! 👍
+                        Services <br>
+                        Pedicure, Manicure</p>
+                        <p class="text-base font-semibold text-black pt-[42px]">Jennifer Xuan</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Got manicure and pedicure done and they did an amazing job! Staff is very friendly and very detailed oriented.
+                        Services
+                        Pedicure, Manicure</p>
+                        <p class="text-base font-semibold text-black pt-[42px]">jay pat</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+          
+                  <div class="custom-swiper-button-prev">
+                    <img src="/images/left_arrow.jpg" alt="left arrow"/>
+                  </div>
+                  <div class="custom-swiper-button-next">
+                    <img src="/images/right_arrow.jpg" alt="right arrow"/>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently Asked Questions -->
+      <section class="pt-[100px]">
+        <div class="full__section_l_p px-4 md:pl-[100px] md:pr-0">
+          <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
+            <div class="md:col-span-3">
+              <div class="h-full flex flex-col items-center md:items-start">
+                <div class="flex items-center justify-center gap-4">
+                  <img src="/images/right-line.png" alt="right-line" />
+                  <h4
+                    class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                  >
+                  Frequently Asked Questions
+                  </h4>
+                  <img
+                    class="mt-2"
+                    src="/images/left-line.png"
+                    alt="left line"
+                  />
+                </div>
+                <div>
+                  <!-- faq accordion  -->
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-3 flex justify-center">
+              <img
+                class="w-full max-w-[1047px] h-auto"
+                src="/images/Frequently Asked Questions.png"
+                alt="Frequently Asked Questions image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact us  -->
+      <section class="pt-[100px]">
+        <div class="full__section_l_p">
+          <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
+            <div class="md:col-span-4 contact__us  px-4 md:pl-[100px] md:pr-0 py-[28px]">
+              <div class="h-full flex flex-col items-center md:items-start">
+                <h4
+                    class="text-3xl lg:text-4xl xl:text-5xl xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                  >
+                  Book An Appointment
+                  </h4>
+                  <form class="w-full pr-[300px]">
+                    <div class="">
+                      <label class="text-lg font-semibold text-[#404040]" for="services">Services</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="services" id="services" placeholder="Please Select Your Services">
+                    </div>
+                    <div class="flex gap-4">
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="day">Day</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="day" id="day" placeholder="Select Day">
+                      </div>
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="hour">Hour</label> <br>
+                        <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="hour" id="hour" placeholder="--:--:--">
+                      </div>
+                    </div>
+                    <div class="flex gap-4">
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="name">Name</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="name" id="name" placeholder="Enter Your Name">
+                      </div>
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="phone">Phone</label> <br>
+                        <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="tel" name="phone" id="phone" placeholder="Enter Your Number">
+                      </div>
+                    </div>
+                    <div class="">
+                      <label class="text-lg font-semibold text-[#404040]" for="email">Email</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="email" name="email" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div>
+                      <label class="text-lg font-semibold text-[#404040]"  for="message">Message</label> <br>
+                      <textarea class="w-full py-1 pl-4 input__field placeholder:text-sm  text-[#404040] font-medium" name="message" id="message" placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <button class="flex justify-center items-center gap-2 text-base mt-4 font-normal bg-[#A0153E] py-2 px-4 rounded-lg text-white"><a href="tel:(905) 973-6669">Book Now</a> <svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
+                      <path d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25" stroke="white"/>
+                      <path d="M0 10.625H34" stroke="white"/>
+                      <path d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625" stroke="white"/>
+                    </svg></button>
+                  </form>
+                
+              </div>
+            </div>
+            <div class="md:col-span-2 -ml-[300px] flex justify-end">
+              <img
+                class="w-full max-w-[600px] h-auto"
+                src="/images/map.png"
+                alt="map image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </main>
-    <footer>footer</footer>
+    <footer>
+      <!-- footer top  -->
+      <div class="footer__bg">
+        <div class="text-white px-[100px] py-[100px]">
+          <div class="flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="682" height="30" viewBox="0 0 682 30" fill="none">
+              <path d="M681.65 15L667.217 0.566243L652.783 15L667.217 29.4338L681.65 15ZM0 17.5L667.217 17.5V12.5L0 12.5L0 17.5Z" fill="#C7A43C"/>
+            </svg>
+            <img class="w-auto h-[70px] md:h-[80px] lg:h-[90px] xl:h-[100px] 2xl:h-[110px] px-10" src="/images/footer__logo.png" alt="footer logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="682" height="30" viewBox="0 0 682 30" fill="none">
+              <path d="M0.349609 15L14.7834 29.4338L29.2172 15L14.7834 0.566243L0.349609 15ZM682 12.5L14.7834 12.5V17.5L682 17.5V12.5Z" fill="#C7A43C"/>
+            </svg>
+          </div>
+          <p class="text-lg font-semibold text-center pb-[55px] pt-[22px]">Find the best nail salon in Mississauga for impeccable manicures & pedicures. Expert service & stunning results await! Book now.</p>
+          <div>
+            <div class="grid grid-cols-1 md:grid-cols-3  gap-10">
+              <div class="flex justify-center md:justify-start">
+                <div class="w-1/2 text-center md:text-left">
+                  <h5 class="text-2xl font-semibold pb-[28px]">Navigation</h5>
+                  <ul class="text-lg font-medium">
+                    <li>Blogs</li>
+                    <li class="py-[26px]">Contact Us</li>
+                    <li>Testimonial</li>
+                    <li class="py-[26px]">Gallery</li>
+                    <li>Sitemap</li>
+                  </ul>
+                </div>
+                <div class="w-1/2 hidden lg:block">
+                  <h5 class="text-2xl font-semibold pb-[28px]">Ours Services</h5>
+                  <ul class="text-lg font-medium">
+                    <li>Manicure</li>
+                    <li class="py-[26px]">Pedicure</li>
+                    <li>Waxing</li>
+                    <li class="py-[26px]">Design</li>
+                    <li>Artificial Nails</li>
+                    <li class="pt-[26px]">Additional Services</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center md:text-left">
+                <h5 class="text-2xl font-semibold pb-[28px]">Contact Us</h5>
+                <p class="flex justify-center md:justify-start items-center gap-4 text-lg font-medium"><img src="/images/location.png" alt="location icon"> <a href="location : 1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada">1100 Burnhamthorpe Rd W Unit 16, Mississauga, ON L5C 4G4, Canada</a></p>
+                <p class="flex justify-center md:justify-start items-center gap-4 text-lg font-medium py-[26px]"> <img src="/images/phone.png" alt="phone icon"> <a href="tel : (905) 973-6669">(905) 973-6669</a></p>
+                <p class="flex justify-center md:justify-start items-center gap-4 text-lg font-medium"><img src="/images/email.png" alt="email icon"> <a href="email : manager@lavishluxnailsandspa.com">manager@lavishluxnailsandspa.com</a></p>
+              </div>
+              <div>
+                <div class="f__border py-[17px]">
+                  <h5 class="text-2xl font-medium text-center">Open Hours</h5>
+                <!-- <div class="pt-[12px] pb-[24px] px-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="280" height="24" viewBox="0 0 424 24" fill="none">
+                    <path d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z" fill="#C7A43C"/>
+                  </svg>
+                  
+                </div> -->
+                <div class="w-[120px] md:w-[140px] lg:w-[160px] xl:w-[180px] 2xl:w-[200px] h-[3px] mx-auto bg-[#C7A43C] my-2"></div>
+                
+                <p class="text-lg font-medium text-center">Mon. ~ Fri. <br> 10:00am ~ 7:00pm <br> Sat. <br> 9:00am ~ 6:00pm <br> Sun. <br> 11:00am ~ 5:00pm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer bottom  -->
+       <div class="flex flex-col lg:flex-row px-4 md:px-[100px] bg-[#C7A43C] py-[10px] flex justify-between items-center text-white">
+         <p class="flex gap-2 items-center text-base font-semibold">WEBSITE DESIGN AND SEO BY :- <img src="/images/gokundu__logo.png" alt="gokundu__logo"></p>
+         <p class="text-base font-medium">© All Copyright 2024 by Lavish Lux Nail Spa</p>
+         <p class="flex justify-between items-center text-base font-medium"><span class="pr-10">Terms & Condition</span>   <span>Privacy Policy</span>    </p>
+       </div>
+    </footer>
 
       <!-- swiper js code  -->
   <script>
