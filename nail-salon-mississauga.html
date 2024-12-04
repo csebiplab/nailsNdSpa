@@ -58,9 +58,29 @@
     <!-- tailwind css cdn link up  -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- small device nav bar  -->
+    <!-- <style>
+      .hide-on-scroll {
+        transition: opacity 0.5s, padding 0.5s;
+        opacity: 1;
+      }
+      .hidden {
+        opacity: 0;
+      }
+      .padded {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    </style> -->
+
     <!-- swiper css use  -->
     <style>
       .swiper-container {
+        width: 100%;
+        padding: 60px;
+        position: relative;
+      }
+      .swiper-container2 {
         width: 100%;
         padding: 60px;
         position: relative;
@@ -219,15 +239,123 @@ padding-top: 18px;
   
   </head>
 
-  <body>
-    <header>header</header>
+  <body class="relative">
+
+    <header class="bg-white z-50 sticky top-0">
+      <!-- large device  -->
+      <nav class="hidden lg:block">
+        <div class="flex justify-between items-center py-1">
+          <!-- first div  -->
+          <div>
+            <p class="pl-3 md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto flex items-center gap-2 text-[#A0153E] text-base font-medium"><img src="/images/canada.png" alt="canada logo"> Best Nail Salon in Mississauga</p>
+            <div class="w-[350px] lg:w-[400px] xl:w-[450px] 3xl:w-[500px] 5xl:w-[600px] h-[3px] bg-[#C7A43C] my-4"></div>
+            <ul class="pl-3 md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto flex justify-between text-lg font-semibold text-black cursor-pointer">
+              <li>About</li>
+              <li>Services</li>
+              <li>Book Now</li>
+            </ul>
+          </div>
+          <!-- second div  -->
+          <div>
+            <img class="h-[70px] lg:h-[72px] xl:h-[77px] 2xl:h-[82px] 3xl:h-[87px] 4xl:h-[92px] 5xl:h-[97px] w-auto" src="/images/nav__logo.png" alt="nav__logo">
+          </div>
+          <!-- third div  -->
+          <div>
+            <span class="pr-3 md:pr-8 lg:pr-24 xl:pr-28 2xl:pr-32 3xl:pr-40 4xl:pr-52 5xl:pr-[285px] mx-auto flex items-center">
+              <p class="text-[#A0153E] font-semibold text-sm">Follow Us:</p>
+              <img class="w-[26px] h-[26px] cursor-pointer mx-[30px]" src="/images/f.png" alt="facebook">
+              <img class="w-[26px] h-[26px] cursor-pointer" src="/images/x.png" alt="x">
+              <img class="w-[26px] h-[26px] cursor-pointer mx-[30px]" src="/images/i.png" alt="instagram">
+              <img class="w-[26px] h-[26px] cursor-pointer" src="/images/l.png" alt="linkedin">
+              <img class="w-[26px] h-[26px] cursor-pointer ml-[30px]" src="/images/g.png" alt="google">
+            </span>
+            <div class="w-[370px] lg:w-[430px] xl:w-[470px] 3xl:w-[500px] 5xl:w-[650px] h-[3px] bg-[#C7A43C] my-4"></div>
+            <div class="pr-3 md:pr-8 lg:pr-24 xl:pr-28 2xl:pr-32 3xl:pr-40 4xl:pr-52 5xl:pr-[285px] mx-auto">
+              <ul class="flex items-center justify-between text-lg font-semibold text-black cursor-pointer">
+                <li>Gallery</li>
+                <li>Contact Us</li>
+                <li class="flex items-center gap-2 bg-[#A0153E] text-white py-2 px-3 rounded-[14px]"><img class="w-[23px] h-[23px]" src="/images/p.png" alt="phone icon"> <a href="tel:(905) 973-6669">(905) 973-6669</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+      <!-- small device  -->
+      <nav class="block lg:hidden">
+        <div class="px-[50px]">
+          <div id="">
+            <p class="flex items-center justify-center gap-2 text-[#A0153E] text-sm font-medium"><img src="/images/canada.png" alt="canada logo"> Best Nail Salon in Mississauga</p>
+          </div>
+          <div id="" class="flex justify-between">
+            <span class="w-full h-[3px] bg-[#C7A43C] my-4"></span>
+          </div>
+          <div class="flex justify-between items-center pb-2">
+            <button class="flex gap-2 items-center bg-[#A0153E] text-white py-2 px-3 rounded-[12px] text-sm font-semibold"><img class="w-4 h-4" src="/images/calendar_white.png" alt="book now"> <a href="tel:(905) 973-6669"> Book Now</a> </button>
+            <button class="flex items-center gap-2 bg-[#A0153E] text-white py-2 px-3 rounded-[12px] text-sm font-semibold"><img class="w-[15px] h-[15px] mt-1" src="/images/p.png" alt="phone icon">  <a href="tel:(905) 973-6669">(905) 973-6669</a> </button>
+            <span>
+              <img src="/images/sm_menu_icon.png" alt="menu icon">
+            </span>
+          </div>
+          <div id="scrollable-content" class="my-3 pb-2">
+            <img class="h-[61px] w-auto mx-auto" src="/images/sm_nav_logo.png" alt="nav logo">
+          </div>
+        </div>
+      </nav>
+
+    </header>
+    
+
     <main class="">
+
+       <!-- banner section  -->
+        <section>
+          <div class="hero-section pl-0 md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto">
+            <div class="md:flex items-center relative">
+              <div class="w-full md:w-[70%]">
+                <div class="py-14 md:py-0 px-4 md:pl-0">
+                  <h1 class="leading-normal text-[34px] md:text-[36px] xl:text-[38px] 2xl:text-[42px] 3xl:text-[46px] 4xl:text-[50px] 5xl:text-[55px] font-normal text-left text-[#C7A43C]">
+                    Lavish Lux Nails & Spa - 
+                    Best Nail Salon in Mississauga
+                  </h1>
+                  <p class="text-base lg:text-lg font-normal mb-5 leading-6 mt-4 text-black">
+                    Experience the best nail salon in Mississauga at Lavish Lux Nails & Spa. Expert manicures, pedicures, nail art, and more. Book online now!
+                  </p>
+                  <div class="mb-4 md:mb-0">
+                    <Button class="px-[24px] py-3 bg-[#A0153E] text-white rounded-[12px] text-xs lg:text-lg font-normal capitalize flex items-center gap-x-2">
+                      <span><a href="tel:(905) 973-6669">Book Now</a> </span>
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
+                          <path d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25" stroke="white"/>
+                          <path d="M0 10.625H34" stroke="white"/>
+                          <path d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625" stroke="white"/>
+                        </svg>
+                      </span>
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              <div className="hero-right relative hidden lg:block">
+                <Image
+                  width={758}
+                  height={832}
+                  src="/images/hreo__right.jpg"
+                  alt="hero small image"
+                  className="hero-main-image mb-0"
+                />
+              </div>
+    
+    
+            </div>
+          </div>
+        </section>
       <!-- service section  -->
-       <section>
+       <section class="pt-[55px] md:pt-[60px] lg:pt-[70px] xl:pt-[75px] 2xl:pt-[80px] 3xl:pt-[85px] 4xl:pt-[90px] 5xl:pt-[97px]">
         <div>
-          <div class="container test px-[100px]">
-            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              <div>
+          <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto  test ">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div class="w-full">
                 <div class="flex justify-between items-center service__bg">
                   <h5 class="pl-[20px] py-[8px] text-white text-4xl font-normal">TREATMENT</h5>
                   <img class="p-[20px]" src="/images/right_arrow.png" alt="right arrow">
@@ -268,10 +396,10 @@ padding-top: 18px;
         </div>
        </section>
       <!-- about section  -->
-      <section class="pt-[100px]">
-        <div class="full__section_l_p px-4 md:pl-[100px] md:pr-0">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="pl-0 md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
-            <div class="md:col-span-3">
+            <div class="md:col-span-3 px-6 md:px-0 order-2 md:order-1">
               <div class="h-full flex flex-col items-center md:items-start">
                 <div class="flex items-center justify-center gap-4">
                   <img src="/images/right-line.png" alt="right-line" />
@@ -286,7 +414,7 @@ padding-top: 18px;
                     alt="left line"
                   />
                 </div>
-                <p class="text-lg text-black font-normal pt-4">
+                <p class="text-lg text-black font-normal pt-4 text-center md:text-left">
                   Lavish Lux Nails & Spa stands as the epitome of indulgence and
                   excellence in the heart of Mississauga, earning its reputation
                   as the best nail salon in the area. This luxurious haven
@@ -303,7 +431,7 @@ padding-top: 18px;
                 </p>
               </div>
             </div>
-            <div class="md:col-span-3 flex justify-center">
+            <div class="md:col-span-3 order-1 md:order-2 flex justify-center">
               <img
                 class="w-full max-w-[1047px] h-auto"
                 src="/images/About.png"
@@ -314,8 +442,8 @@ padding-top: 18px;
         </div>
       </section>
       <!-- What Makes a Top-Rated Nail Salon in Mississauga section  -->
-      <section class="pt-[100px]">
-        <div class="px-4 md:px-[100px]">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-[24px]">
             <div class="md:col-span-3">
               <div class="h-full flex flex-col items-center md:items-start pb-10">
@@ -334,7 +462,7 @@ padding-top: 18px;
                 </div>
               </div>
 
-              <div class="swiper-container overflow-hidden">
+              <div class="px-[20px] swiper-container overflow-hidden">
                 <div class="swiper-wrapper relative">
                   
                   <div class="swiper-slide swiper-slide1 cart w-full h-[400px] 2xl:h-[293px]">
@@ -396,7 +524,7 @@ padding-top: 18px;
       </section>
 
       <!-- Feel Our Luxurious section  -->
-       <section class="pt-[100px]">
+       <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
         <div class="">
           <div class="h-full flex flex-col items-center md:items-start pb-10">
             <div class="w-full flex items-center justify-center gap-4">
@@ -416,21 +544,21 @@ padding-top: 18px;
           <div>
             <img src="/images/Feel Our Luxurious.png" alt="Feel Our Luxurious">
           </div>
-          <div class="px-[100px]">
+          <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto mt-0 md:-mt-[60px]">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-11">
-              <img class="pt-6 md:pt-0" src="/images/Feel Our Luxurious-1.png" alt="Feel Our Luxurious1">
-              <img src="/images/Feel Our Luxurious-2.png" alt="Feel Our Luxurious2">
-              <img src="/images/Feel Our Luxurious-3.png" alt="Feel Our Luxurious3">
-              <img src="/images/Feel Our Luxurious-4.png" alt="Feel Our Luxurious4">
+              <img class="pt-6 md:pt-0 w-auto h-[310px] mx-auto" src="/images/Feel Our Luxurious-1.png" alt="Feel Our Luxurious1">
+              <img class="w-auto h-[310px] mx-auto" src="/images/Feel Our Luxurious-2.png" alt="Feel Our Luxurious2">
+              <img class="w-auto h-[310px] mx-auto" src="/images/Feel Our Luxurious-3.png" alt="Feel Our Luxurious3">
+              <img class="w-auto h-[310px] mx-auto" src="/images/Feel Our Luxurious-4.png" alt="Feel Our Luxurious4">
             </div>
           </div>
         </div>
        </section>
 
        <!-- The Lavish Lux Experience -->
-        <section class=" pt-[100px]">
+        <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
           <div class="border border-[#C7A43C] bg-[#f9f1d6]">
-            <div class="bg__lavish__lux px-[100px] pb-[80px] pt-[40px]">
+            <div class="bg__lavish__lux  px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto pb-[80px] pt-[40px]">
               <h3 class="text-4xl xl:text-7xl text-center font-normal primary_color">The Lavish Lux Experience</h3>
               <p class="text-black text-center text-2xl font-normal pt-6">At Lavish Lux, we believe that getting your nails done should be more than just a service - it should be an experience. From the moment you arrive, you'll be treated like royalty, with our attentive staff catering to your every need.</p>
               <p class="text-black text-center text-2xl font-normal pt-2">Indulge in our complimentary beverages while sinking into our plush massage chairs, allowing the stresses of the day to melt away. We pay attention to every detail, ensuring your visit is nothing short of perfect.</p>
@@ -438,9 +566,174 @@ padding-top: 18px;
           </div>
         </section>
 
+        <!-- Why Choose Lavish Lux as Your Nail Salon in Mississauga? -->
+        <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+          <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-[24px]">
+              <div class="md:col-span-3">
+                <div class="h-full flex flex-col items-center md:items-start pb-10">
+                  <div class="w-full flex items-center justify-center gap-4">
+                    <img src="/images/right-line.png" alt="right-line" />
+                    <h4
+                      class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                    >
+                    Why Choose Lavish Lux as Your Nail Salon in Mississauga?
+                    </h4>
+                    <img
+                      class="mt-2"
+                      src="/images/left-line.png"
+                      alt="left line"
+                    />
+                  </div>
+                </div>
+  
+                <div class="w-full h-[2px] bg-[#C7A43C]"></div>
+                <div class="flex justify-around items-center">
+                  <div class="hidden sm:block h-[100px] w-[2px] bg-[#C7A43C]"></div>
+                  <div class="h-[100px] w-[2px] bg-[#C7A43C]"></div>
+                  <div class="hidden sm:block h-[100px] w-[2px] bg-[#C7A43C]"></div>
+                </div>
+                <div class="px-[20px] swiper-container overflow-hidden">
+                  <div class="swiper-wrapper relative">
+                    
+                    <div class="swiper-slide swiper-slide1 cart w-full h-[400px] 2xl:h-[293px]">
+                      <img class="absolute -top-[60px] inset-x-8 xl:inset-x-24 mx-auto  border-2 border-[#C7A43C] p-4 rounded-full" src="/images/s1.png" alt="s1">
+                      <div class=" pt-[40px]">
+                        <h4 class="text-2xl font-normal text-center text-black pb-1 2xl:pb-3">Highly Trained & Experienced Staff</h4>
+                      <p class="text-lg font-medium text-center text-[#393939]">Our team of nail artists is not only passionate about their craft but also highly trained and experienced. They undergo regular training to stay up-to-date with the latest techniques and trends, ensuring you receive the best service possible.</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide1 cart w-full h-[400px] 2xl:h-[293px]">
+                      <img class="absolute -top-[60px] inset-x-8 xl:inset-x-24 mx-auto border-2 border-[#C7A43C] p-4 rounded-full" src="/images/s2.png" alt="s2">
+                      <div class="pt-[40px]">
+                        <h4 class="text-2xl font-normal text-center text-black pb-1 2xl:pb-3">Awarded for Excellence in Customer Service</h4>
+                      <p class="text-lg font-medium text-center text-[#393939]"> We take pride in our exceptional customer service, and it shows. Lavish Lux has been recognized and awarded by various local publications for our outstanding service and commitment to our clients.</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide1 cart w-full h-[400px] 2xl:h-[293px]">
+                      <img class="absolute -top-[60px] inset-x-8 xl:inset-x-24 mx-auto  border-2 border-[#C7A43C] p-4 rounded-full" src="/images/s3.png" alt="s3">
+                      <div class="pt-[40px]">
+                        <h4 class="text-2xl font-normal text-center text-black pb-1 2xl:pb-3">Impeccable Sanitation 
+                          & Safety Standards</h4>
+                      <p class="text-lg font-medium text-center text-[#393939]">Your health and safety are our top priorities. We follow strict sanitation protocols, using hospital-grade disinfectants and sterilizing all tools and equipment after each use. We Ensure comfortable experience for our clients and staff.</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide1 cart w-full h-[400px] 2xl:h-[293px]">
+                      <img class="absolute -top-[60px] inset-x-8 xl:inset-x-24 mx-auto  border-2 border-[#C7A43C] p-4 rounded-full" src="/images/s4.png" alt="s4">
+                      <div class="pt-[40px]">
+                        <h4 class="text-2xl font-normal text-center text-black pb-1 2xl:pb-3">Specializing in Nail Art & Designs</h4>
+                      <p class="text-lg font-medium text-center text-[#393939]">Our talented nail artists are true masters of their craft, specializing in intricate nail art and designs. From classic French tips to trendy ombre nails and everything in between, we can bring your wildest nail dreams to life.p>
+                      </div>
+                    </div>
+                    
+                  </div>
+          
+                  <div class="custom-swiper-button-prev">
+                    <img src="/images/left_arrow.jpg" alt="left arrow"/>
+                  </div>
+                  <div class="custom-swiper-button-next">
+                    <img src="/images/right_arrow.jpg" alt="right arrow"/>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Our Services at Lavish Lux Nails & Spa -->
+        <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+          <div class=" px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto">
+            <div class="h-full flex flex-col items-center md:items-start pb-10">
+              <div class="w-full flex items-center justify-center gap-4">
+                <img src="/images/right-line.png" alt="right-line" />
+                <h4
+                  class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                >
+                Our Services at Lavish Lux Nails & Spa
+                </h4>
+                <img
+                  class="mt-2"
+                  src="/images/left-line.png"
+                  alt="left line"
+                />
+              </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-6 items-center justify-center gap-10 sm:gap-[80px]">
+              <div class="md:col-span-3 flex justify-center">
+                <img
+                  class="w-full max-w-[1047px] h-auto"
+                  src="/images/Our Services at Lavish Lux Nails & Spa.png"
+                  alt="Our Services at Lavish Lux Nails & Spa image"
+                />
+              </div>
+              <!-- large device  -->
+              <div class="hidden md:block md:col-span-3">
+                <div class="flex justify-end gap-6">
+                  <div class="mt-[50px]">
+                    <div class="our__service__bg">
+                      <img class=" w-[126px] h-[126px] mx-auto" src="/images/spa1.png" alt="spa1">
+                      <p class="text-black text-center text-3xl font-normal">Pedicure</p>
+                    </div>
+                    <div class="our__service__bg my-[24px]">
+                      <img class="w-[126px] h-[126px] mx-auto " src="/images/spa2.png" alt="spa2">
+                      <p class="text-black text-center text-3xl font-normal">Artificial <br> Nails</p>
+                    </div>
+                    <div class="our__service__bg">
+                      <img class="w-[126px] h-[126px] mx-auto" src="/images/spa3.png" alt="spa3">
+                      <p class="text-black text-center text-3xl font-normal">Additional <br> Services</p>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="our__service__bg">
+                      <img class="w-[126px] h-[126px]" src="/images/spa4.png" alt="spa4">
+                      <p class="text-black text-center text-3xl font-normal">Manicure</p>
+                    </div>
+                    <div class="our__service__bg my-[24px]">
+                      <img class="w-[126px] h-[126px] " src="/images/spa5.png" alt="spa5">
+                      <p class="text-black text-center text-3xl font-normal">Waxing</p>
+                    </div>
+                    <div class="our__service__bg">
+                      <img class="w-[126px] h-[126px]" src="/images/spa6.png" alt="spa6">
+                      <p class="text-black text-center text-3xl font-normal">Design</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- small device  -->
+              <div class="block md:hidden md:col-span-3">
+                <div class="our__service__bg">
+                  <img class=" w-[126px] h-[126px] mx-auto" src="/images/spa1.png" alt="spa1">
+                  <p class="text-black text-center text-3xl font-normal">Pedicure</p>
+                </div>
+                <div class="our__service__bg my-[24px]">
+                  <img class="w-[126px] h-[126px] mx-auto " src="/images/spa2.png" alt="spa2">
+                  <p class="text-black text-center text-3xl font-normal">Artificial Nails</p>
+                </div>
+                <div class="our__service__bg">
+                  <img class="w-[126px] h-[126px] mx-auto" src="/images/spa3.png" alt="spa3">
+                  <p class="text-black text-center text-3xl font-normal">Additional Services</p>
+                </div>
+                <div class="our__service__bg my-[24px]">
+                  <img class="w-[126px] h-[126px] mx-auto" src="/images/spa4.png" alt="spa4">
+                  <p class="text-black text-center text-3xl font-normal">Manicure</p>
+                </div>
+                <div class="our__service__bg">
+                  <img class="w-[126px] h-[126px] mx-auto " src="/images/spa5.png" alt="spa5">
+                  <p class="text-black text-center text-3xl font-normal">Waxing</p>
+                </div>
+                <div class="our__service__bg mt-[24px]">
+                  <img class="w-[126px] h-[126px] mx-auto" src="/images/spa6.png" alt="spa6">
+                  <p class="text-black text-center text-3xl font-normal">Design</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
          <!-- Nails Salon Diaries: Where Beauty Meets Precision section  -->
-      <section class="pt-[100px]">
-        <div class="">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="px-6 md:px-0">
           <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-[24px]">
             <div class="md:col-span-3">
               <div class="h-full flex flex-col items-center md:items-start pb-10">
@@ -459,8 +752,8 @@ padding-top: 18px;
                 </div>
               </div>
               
-              <div class="swiperSlide2 px-4 md:px-[100px] py-[26px]">
-                <div class="swiper-container overflow-hidden  ">
+              <div class="swiperSlide2 px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto py-[26px]">
+                <div class="px-[20px] swiper-container overflow-hidden  ">
                   <div class="swiper-wrapper relative ">
                     
                     <div class="swiper-slide w-full h-[400px] 2xl:h-[293px]">
@@ -524,8 +817,8 @@ padding-top: 18px;
       </section>
 
       <!-- Best Nail Salon section  -->
-      <section class="pt-[100px]">
-        <div class="full__section_l_p px-4 md:pr-[100px] md:pl-0">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="pr-3 md:pr-8 lg:pr-24 xl:pr-28 2xl:pr-32 3xl:pr-40 4xl:pr-52 5xl:pr-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
             <div class="md:col-span-3 flex justify-center">
               <img
@@ -534,7 +827,7 @@ padding-top: 18px;
                 alt="Best Nail Salon image"
               />
             </div>
-            <div class="md:col-span-3">
+            <div class="md:col-span-3 px-6 md:px-0">
               <div class="h-full flex flex-col items-center md:items-start">
                 <div class="flex items-center justify-center gap-4">
                   <img src="/images/right-line.png" alt="right-line" />
@@ -549,7 +842,7 @@ padding-top: 18px;
                     alt="left line"
                   />
                 </div>
-                <p class="text-lg text-black font-normal pt-4">
+                <p class="text-lg text-black font-normal pt-4 text-center md:text-left">
                   Some folks think the fanciest nail salons must cost a lot
                   because they offer top-notch treatments and fancy extras. They
                   believe paying more means getting the best service. But not
@@ -574,9 +867,9 @@ padding-top: 18px;
       </section>
 
       <!-- Design Your Nails at Mississauga's Best Spa section -->
-      <section class=" pt-[100px]">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
         <div class="border border-[#C7A43C] bg-[#f9f1d6]">
-          <div class="bg__lavish__lux px-[100px] pb-[80px] pt-[40px]">
+          <div class="bg__lavish__lux px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto pb-[80px] pt-[40px]">
             <h3 class="text-4xl xl:text-7xl text-center font-normal primary_color">Design Your Nails 
               at Mississauga's Best Spa</h3>
             <p class="text-black text-center text-2xl font-normal pt-6">At Lavish Lux, we believe your nails should reflect your unique style and personality. That's why we offer a wide range of customization options, allowing you to create a look that is truly your own.</p>
@@ -586,10 +879,10 @@ padding-top: 18px;
       </section>
 
       <!-- Why Our Nail Salon  section  -->
-      <section class="pt-[100px]">
-        <div class="full__section_l_p px-4 md:px-[100px]">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
-            <div class="md:col-span-3">
+            <div class="md:col-span-3 order-2 md:order-1">
               <div class="h-full flex flex-col items-center md:items-start">
                 <div class="flex items-center justify-center gap-4">
                   <img src="/images/right-line.png" alt="right-line" />
@@ -604,7 +897,7 @@ padding-top: 18px;
                     alt="left line"
                   />
                 </div>
-                <p class="text-lg text-black font-normal pt-4">
+                <p class="text-lg text-black font-normal pt-4 text-center md:text-left">
                   Forget just getting pretty nails! Nail salons are like
                   mini-communities where people who love nail art can hang out
                   and share ideas. It's not just about showing off your
@@ -623,7 +916,7 @@ padding-top: 18px;
                 </p>
               </div>
             </div>
-            <div class="md:col-span-3 flex justify-center">
+            <div class="md:col-span-3 order-1 md:order-2 flex justify-center">
               <img
                 class="w-full max-w-[1047px] h-auto"
                 src="/images/Why Our Nail Salon Deserves Your Attention.png"
@@ -635,8 +928,8 @@ padding-top: 18px;
       </section>
 
       <!-- Benefits of a Great  section  -->
-      <section class="pt-[100px]">
-        <div class="px-4 md:px-[100px]">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
             <div class="md:col-span-3 flex justify-center">
               <img
@@ -674,10 +967,10 @@ padding-top: 18px;
       </section>
 
       <!-- Our Nail Salon's Working Process  section  -->
-      <section class="pt-[100px]">
-        <div class="full__section_l_p px-4 md:pl-[100px] md:pr-0">
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class=" md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
-            <div class="md:col-span-3">
+            <div class="md:col-span-3 order-2 md:order-1  px-6 md:px-0">
               <div class="h-full flex flex-col items-center md:items-start">
                 <div class="flex items-center justify-center gap-4">
                   <img src="/images/right-line.png" alt="right-line" />
@@ -692,7 +985,7 @@ padding-top: 18px;
                     alt="left line"
                   />
                 </div>
-                <p class="text-lg text-black font-normal pt-4">
+                <p class="text-lg text-black font-normal pt-4 text-center md:text-left">
                   At Lavish Lux, we strive to make your experience as seamless and enjoyable as possible from start to finish. Here's what you can expect when you visit our salon:
                   <p><span class="font-bold">1. Booking: </span> You can easily book your appointment online through our website or give us a call. Our friendly staff will be happy to assist you in scheduling a time that works best for you.</p>
                   <p><span class="font-bold">2. Arrival: </span>When you arrive at our salon, you'll be greeted warmly by our staff and invited to make yourself comfortable in our relaxing waiting area.</p>
@@ -703,7 +996,7 @@ padding-top: 18px;
                 </p>
               </div>
             </div>
-            <div class="md:col-span-3 flex justify-center">
+            <div class="md:col-span-3 order-1 md:order-2 flex justify-center">
               <img
                 class="w-full max-w-[1047px] h-auto"
                 src="/images/Our Nail Salon's Working Process.png"
@@ -715,7 +1008,7 @@ padding-top: 18px;
       </section>
 
       <!-- Gallery section  -->
-       <section class="pt-[100px]">
+       <!-- <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
         <div class="">
           <div class="h-full flex flex-col items-center md:items-start pb-10">
             <div class="w-full flex items-center justify-center gap-4">
@@ -732,31 +1025,79 @@ padding-top: 18px;
               />
             </div>
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-7 px-6 md:px-0">
             <div class="">
-              <img class="w-[717px] h-[880px]" src="/images/gallery1.png" alt="gallery1">
+              <img class=" w-[370px] h-[276px] md:w-[717px] md:h-[500px]" src="/images/gallery1.png" alt="gallery1">
             </div>
-            <div class="pt-3">
-              <img class="w-[575px] h-[427px] rounded-lg pb-[28px]"  src="/images/gallery2.png" alt="gallery2">
-              <img class="w-[575px] h-[427px] rounded-lg" src="/images/gallery4.png" alt="gallery4">
+            <div class="pt-2">
+              <img class="w-[370px] h-[276px] md:w-[575px] md:h-[240px] rounded-lg pb-[28px]"  src="/images/gallery2.png" alt="gallery2">
+              <img class="w-[370px] h-[276px] md:w-[575px] md:h-[240px] rounded-lg" src="/images/gallery4.png" alt="gallery4">
             </div>
-            <div class="pt-3">
-              <img class="w-[575px] h-[427px] rounded-lg pb-[28px]" src="/images/gallery3.png" alt="gallery3">
-              <img class="w-[575px] h-[427px] rounded-lg" src="/images/gallery5.png" alt="gallery5">
+            <div class="pt-2">
+              <img class="w-[370px] h-[276px] md:w-[575px] md:h-[240px] rounded-lg pb-[28px]" src="/images/gallery3.png" alt="gallery3">
+              <img class="w-[370px] h-[276px] md:w-[575px] md:h-[240px] rounded-lg" src="/images/gallery5.png" alt="gallery5">
             </div>
 
           </div>
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-7 ">
-            <img class="w-[485px] h-[494px]" src="/images/gallery6.png" alt="gallery6">
-            <img class="w-[832px] h-[494px]" src="/images/gallery8.png" alt="gallery8">
-            <img class="w-[551px] h-[494px]" src="/images/gallery7.png" alt="gallery7">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-7 px-5 md:px-0 pt-3">
+            <img class="w-[370px] h-[276px] md:w-[485px] md:h-[300px]" src="/images/gallery6.png" alt="gallery6">
+            <img class="col-span-2 w-[370px] h-[276px] md:w-[832px] md:h-[300px]" src="/images/gallery8.png" alt="gallery8">
+            <img class="w-[450px] h-[276px] md:w-[551px] md:h-[300px]" src="/images/gallery7.png" alt="gallery7">
           </div>
         </div>
-       </section>
+       </section> -->
+
+       <!-- Gallery section  start-->
+       <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="">
+          <div class="h-full flex flex-col items-center md:items-start pb-10">
+            <div class="w-full flex items-center justify-center gap-4">
+              <img src="/images/right-line.png" alt="right-line" />
+              <h4 class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color">
+                Gallery
+              </h4>
+              <img class="mt-2" src="/images/left-line.png" alt="left line" />
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-7 px-6 md:px-0">
+            <div class="">
+              <img class="w-full md:w-[717px] h-[340px] md:h-[500px]" src="/images/gallery1.png" alt="gallery1">
+            </div>
+            <div class="pt-2">
+              <img class="w-full md:w-[575px] md:h-[240px] rounded-lg pb-[28px]" src="/images/gallery2.png" alt="gallery2">
+              <img class="w-full md:w-[575px] md:h-[240px] rounded-lg" src="/images/gallery4.png" alt="gallery4">
+            </div>
+            <div class="pt-2">
+              <img class="w-full md:w-[575px] md:h-[240px] rounded-lg pb-[28px]" src="/images/gallery3.png" alt="gallery3">
+              <img class="w-full md:w-[575px] md:h-[240px] rounded-lg" src="/images/gallery5.png" alt="gallery5">
+            </div>
+          </div>
+
+          
+          <div class="hidden md:block">
+            <div class=" grid grid-cols-1 md:grid-cols-3 gap-7 px-6 md:px-0 pt-4">
+              <div class="pt-2">
+                <img class="w-full md:w-[575px] md:h-[240px] rounded-lg pb-[28px]" src="/images/gallery2.png" alt="gallery2">
+                <img class="w-full md:w-[575px] md:h-[240px] rounded-lg" src="/images/gallery4.png" alt="gallery4">
+              </div>
+              <div class="pt-2">
+                <img class="w-full md:w-[575px] md:h-[240px] rounded-lg pb-[28px]" src="/images/gallery3.png" alt="gallery3">
+                <img class="w-full md:w-[575px] md:h-[240px] rounded-lg" src="/images/gallery5.png" alt="gallery5">
+              </div>
+              <div class="">
+                <img class="w-full md:w-[717px] h-[340px] md:h-[500px]" src="/images/gallery1.png" alt="gallery1">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!-- Gallery section  end-->
 
        <!-- Book Your Appointment section  -->
-       <section class="pt-[100px]">
-        <div class="full__section_l_p px-4 md:pr-[100px] md:pl-0">
+       <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="md:pr-8 lg:pr-24 xl:pr-28 2xl:pr-32 3xl:pr-40 4xl:pr-52 5xl:pr-[285px] mx-auto">
           <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
             <div class="md:col-span-3 flex justify-center">
               <img
@@ -780,44 +1121,443 @@ padding-top: 18px;
                     alt="left line"
                   />
                 </div>
-                <p class="text-lg text-black font-medium pt-4">
+                <p class="text-lg text-black font-medium pt-4 text-center md:text-left px-6 md:px-0">
                   Are you ready to indulge in a luxurious and relaxing nail experience like no other? Book your appointment at Lavish Lux Nails & Spa today and discover why we're the best nail salon in Mississauga.
                 </p>
-                <p class="text-lg text-black font-medium">
+                <p class="text-lg text-black font-medium text-center md:text-left px-6 md:px-0">
                   
                 Don't forget to ask about our special packages and gift card options - perfect for treating yourself or someone special.
                 </p>
-                <p class="text-lg text-black font-medium">
+                <p class="text-lg text-black font-medium text-center md:text-left px-6 md:px-0">
                   Treat yourself to the ultimate pampering experience at Lavish Lux Nails & Spa. Book your appointment today, and let us transform your nails into works of art!
                 </p>
-                <a href="tel:(905)973 - 6669">
+                <a href="tel:(905) 973 - 6669">
                   <button class="book__appointment my-[25px]">Book Appointment</button>
                 </a>
                 
-                <h4 class="text-black text-[25px] font-medium">or Call Us: <span class="primary_color font-semibold"><a href="tel:(905)973 - 6669">(905)973 - 6669</a></span></h4>
+                <h4 class="text-black text-[25px] font-medium">or Call Us: <span class="primary_color font-semibold"><a href="tel:(905) 973 - 6669">(905) 973 - 6669</a></span></h4>
               </div>
             </div>
           </div>
         </div>
       </section>
+
+       <!-- Review  -->
+       <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="">
+          <div class="grid grid-cols-1 md:grid-cols-3 items-center gap-[24px]">
+            <div class="md:col-span-3">
+              <div class="h-full flex flex-col items-center md:items-start">
+                <div class="w-full flex items-center justify-center gap-4">
+                  <img src="/images/right-line.png" alt="right-line" />
+                  <h4
+                    class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                  >
+                  Review
+                  </h4>
+                  <img
+                    class="mt-2"
+                    src="/images/left-line.png"
+                    alt="left line"
+                  />
+                </div>
+              </div>
+              
+              <div class="px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto">
+                <div class="px-[20px] swiper-container overflow-hidden  ">
+                  <div class="swiper-wrapper relative ">
+                    
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                      <p class="text-lg font-medium text-left text-black">Great place to relax and get pampered. Great service and professional staff. Highly recommend you come and experience this place.</p>
+                      <p class="text-base font-semibold text-black pt-[42px]">Sandra Serrao</p>
+                      <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Definitely recommend this place. I always get bio gels and my designs come out looking amazing each time. Great service and very friendly staff.</p>
+                        <p class="text-base font-semibold text-black pt-[42px]">Artemis Radman</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Got manicure and pedicure done and they did an amazing job! Staff is very friendly and very detailed oriented.
+                        Services
+                        Pedicure, Manicure</p>
+                        <p class="text-base font-semibold text-black pt-[42px]">jay pat</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                      <p class="text-lg font-medium text-left text-black">Since last year I'm been a client of lavish Lux nails, I love this place and how their do/take care of my nails. Highly recommend. Their attention to their clients is amazing</p>
+                      <p class="text-base font-semibold text-black pt-[42px]">Maria Barcenas</p>
+                      <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Amazing job from the nails tech.. friendly staff.. I love the way they work like team work and give me very good vide every time I come here. <p>
+                        <p class="text-base font-semibold text-black pt-[42px]">Chloe Le</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div class="review__cart">
+                        <img src="/images/google.png" alt="google">
+                        <img src="/images/review.png" alt="review">
+                        <p class="text-lg font-medium text-left text-black">Beautiful place and very attentive to detail of the nails and shape. Julie and Demi took us super quickly and did an amazing job! Definitely coming back! </p>
+                        <p class="text-base font-semibold text-black pt-[42px]">Shae Wilson</p>
+                        <p class="text-xs text-[#4A4A4A] font-semibold">Mississauga</p>
+                      </div>
+                    </div>
+                    
+                  </div>
+          
+                  <div class="custom-swiper-button-prev">
+                    <img src="/images/left_arrow.jpg" alt="left arrow"/>
+                  </div>
+                  <div class="custom-swiper-button-next">
+                    <img src="/images/right_arrow.jpg" alt="right arrow"/>
+                  </div>
+                </div>
+              </div>
+              
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Frequently Asked Questions -->
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
+            <div class="md:col-span-3  px-6 md:px-0">
+              <div class="h-full flex flex-col items-center md:items-start">
+                <div class="flex items-center justify-center gap-4">
+                  <img src="/images/right-line.png" alt="right-line" />
+                  <h4
+                    class="text-3xl lg:text-[32px] xl:text-[34px] xl2:text-4xl xl3:text-[38px] xl4:text-[40px] xl5:text-[42px] font-normal text-center primary_color"
+                  >
+                  Frequently Asked Questions
+                  </h4>
+                  <img
+                    class="mt-2"
+                    src="/images/left-line.png"
+                    alt="left line"
+                  />
+                </div>
+                <div>
+                  <!-- faq accordion  -->
+                  <div class=" flex items-center justify-center pt-[16px] lg:pt-[20px] 5xl:pt-[25px]">
+                    <div class="w-full">
+                      <div id="accordion">
+                        <div class="border-b rounded-[10px]">
+                          <button class="w-full text-left p-4 focus:outline-none  text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white rounded-t-[8px] " onclick="toggleAccordion(1)">
+                            <div class="flex items-center justify-between">
+                              <span>What services do Lavish Lux Nails & Spa in Mississauga offer?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section1" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">We offer a wide range of nail services, including classic and gel manicures, spa pedicures, acrylic and gel enhancements, nail art and designs, nail repair, and callus treatment. We also provide waxing services, facials, and eyelash extensions.</p>
+                          </div>
+                        </div>
+                        <div class="border-b my-1">
+                          <button class="w-full text-left p-4 focus:outline-none  text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white" onclick="toggleAccordion(2)">
+                            <div class="flex items-center justify-between">
+                              <span>How much do manicures and pedicures cost on average in Mississauga?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section2" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">Our classic manicures range from $20 to $35, while gel manicures are priced between $30 and $45. Spa pedicures typically cost between $35 and $55, depending on the specific service.</p>
+                          </div>
+                        </div>
+                        <div class="border-b">
+                          <button class="w-full text-left p-4 focus:outline-none  text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white" onclick="toggleAccordion(3)">
+                            <div class="flex items-center justify-between">
+                              <span>What brands of nail polish and products do these salons use?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section3" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">At Lavish Lux, we use high-quality products from trusted brands like OPI, CND, and Gelish to ensure the best possible results and longevity.</p>
+                          </div>
+                        </div>
+                        <div class="border-b my-1">
+                          <button class="w-full text-left p-4 focus:outline-none  text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white" onclick="toggleAccordion(4)">
+                            <div class="flex items-center justify-between">
+                              <span>Is Lavish Lux Nails & Spa following COVID-19 safety protocols?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section4" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">Yes, your safety is our top priority. We strictly follow all COVID-19 safety guidelines, including thorough sanitization, social distancing measures, and requiring all staff and clients to wear masks</p>
+                          </div>
+                        </div>
+                        <div class="border-b">
+                          <button class="w-full text-left p-4 focus:outline-none  text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white" onclick="toggleAccordion(5)">
+                            <div class="flex items-center justify-between">
+                              <span>Can I bring my nail polish or products for the salon to use?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section5" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">While we appreciate your preference for specific products, we kindly ask that you allow us to use our professional-grade products to ensure consistent quality and results.p>
+                          </div>
+                        </div>
+                        <div class="border-b my-1">
+                          <button class="w-full text-left p-4 focus:outline-none  text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white " onclick="toggleAccordion(6)">
+                            <div class="flex items-center justify-between">
+                              <span>Does our salon offer group bookings for events like weddings or birthdays?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section6" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">Absolutely! We offer special group packages and discounts for events like bridal parties, bachelorette parties, and birthday celebrations. Please get in touch with us in advance to make arrangements for your group.p>
+                          </div>
+                        </div>
+                        <div class="border-b">
+                          <button class="w-full text-left p-4 focus:outline-none text-sm md:text-base 2xl:text-lg 5xl:text-[20px] font-medium bg-[#C7A43C] text-white" onclick="toggleAccordion(7)">
+                            <div class="flex items-center justify-between">
+                              <span>What is the cancellation policy for appointments?</span>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 18 13" fill="none">
+                                <path d="M9.45043 11.9429C9.05033 12.4729 8.25436 12.4729 7.85426 11.9429L2.50105 4.85255C2.00363 4.19372 2.47361 3.25 3.29913 3.25L14.0056 3.25C14.8311 3.25 15.3011 4.19372 14.8036 4.85255L9.45043 11.9429Z" fill="white"/>
+                              </svg>
+                            </div>
+                          </button>
+                          <div id="section7" class="p-4 hidden faq_para_border">
+                            <p class="text-black text-lg font-medium">To avoid any fees, please provide at least 24 hours notice for cancellations or rescheduling. However, we understand that emergencies can happen, and we'll do our best to accommodate you.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  
+                    
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="md:col-span-3 flex justify-center">
+              <img
+                class="w-full max-w-[1047px] h-auto"
+                src="/images/Frequently Asked Questions.png"
+                alt="Frequently Asked Questions image"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- contact us  -->
+      <section class="pt-14 lg:pt-[70px] xl:pt-[80px] 2xl:pt-[90px] 3xl:pt-[100px] 4xl:pt-[110px] 5xl:pt-[120px]">
+        <div class="">
+          <div class="grid grid-cols-1 md:grid-cols-6 items-center gap-[24px]">
+            <div class="md:col-span-4 order-2 md:order-1 contact__us  pl-3 md:pl-8 lg:pl-24 xl:pl-28 2xl:pl-32 3xl:pl-40 4xl:pl-52 5xl:pl-[285px] py-[28px]">
+              <div class="h-full flex flex-col items-center md:items-start">
+                <h4
+                    class="w-full text-3xl lg:text-4xl xl:text-5xl 2xl:text-4xl 3xl:text-[38px] 4xl:text-[40px] 5xl:text-[42px] font-normal text-left  primary_color pb-6"
+                  >
+                  Book An Appointment
+                  </h4>
+                  <form class="w-full pl-3 pr-6 md:pr-[200px] lg:pr-[300px]">
+                    <div class="">
+                      <label class="text-lg font-semibold text-[#404040]" for="services">Services</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="services" id="services" placeholder="Please Select Your Services">
+                    </div>
+                    <div class="flex gap-4">
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="day">Day</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="day" id="day" placeholder="Select Day">
+                      </div>
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="hour">Hour</label> <br>
+                        <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="hour" id="hour" placeholder="--:--:--">
+                      </div>
+                    </div>
+                    <div class="flex gap-4">
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="name">Name</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="text" name="name" id="name" placeholder="Enter Your Name">
+                      </div>
+                      <div class="w-1/2">
+                        <label class="text-lg font-semibold text-[#404040]"  for="phone">Phone</label> <br>
+                        <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="tel" name="phone" id="phone" placeholder="Enter Your Number">
+                      </div>
+                    </div>
+                    <div class="">
+                      <label class="text-lg font-semibold text-[#404040]" for="email">Email</label> <br>
+                      <input class="w-full py-1 pl-4 input__field placeholder:text-sm text-[#404040] font-medium" type="email" name="email" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div>
+                      <label class="text-lg font-semibold text-[#404040]"  for="message">Message</label> <br>
+                      <textarea class="w-full py-1 pl-4 input__field placeholder:text-sm  text-[#404040] font-medium" name="message" id="message" placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <button class="flex justify-center items-center gap-2 text-base mt-4 font-normal bg-[#A0153E] py-2 px-4 rounded-lg text-white"><a href="tel:(905) 973-6669">Book Now</a> <svg xmlns="http://www.w3.org/2000/svg" width="34" height="22" viewBox="0 0 34 22" fill="none">
+                      <path d="M34 10.625C29.3056 10.625 25.5 15.382 25.5 21.25" stroke="white"/>
+                      <path d="M0 10.625H34" stroke="white"/>
+                      <path d="M25.5 0C25.5 5.868 29.3056 10.6249 34 10.625" stroke="white"/>
+                    </svg></button>
+                  </form>
+                
+              </div>
+            </div>
+            <div class="md:col-span-2 order-1 md:order-2 -ml-0 md:-ml-[200px] lg:-ml-[300px] flex justify-end  px-6 md:px-0">
+              <!-- <img
+                class="w-full md:w-[400px] lg:w-[550px] xl:w-[650px] 2xl:w-[700px] 3xl:w-[750px] 4xl:w-[800px] 5xl:w-[867px] h-[240px] md:h-[250px] lg:h-[270px] xl:h-[290px] 2xl:h-[310px] 3xl:h-[350px] 4xl:h-[400px] 5xl:h-[450px]"
+                src="/images/map.png"
+                alt="map image"
+              /> -->
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11563.047948631282!2d-79.6617351!3d43.5698424!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b41ac57881c31%3A0xe4671580386bf3cc!2sLavish%20Lux%20Nails%20%26%20Spa%20Mississauga!5e0!3m2!1sen!2sbd!4v1719686375046!5m2!1sen!2sbd" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
     </main>
-    <footer>footer</footer>
+    <!-- 3 button sticky part start -->
+    <div class="hidden md:block">
+      <div class="bottom-0 z-50 fixed right-0">
+        <div class="w-full h-screen flex flex-col justify-center items-end">
+          <button class="w-[190px] flex items-center gap-2 bg-[#fde0da] hover:bg-white border-2 border-[#9f6657] px-4 py-2 rounded-lg text-lg font-medium"><img class="w-4 h-4" src="/images/phone_icon.png" alt="phone icon"><a href="tel:(905) 973-6669">(905) 973-6669</a></button>
+          <button class="w-[190px] flex items-center gap-2 bg-[#fde0da] hover:bg-white border-2 border-[#9f6657] px-4 py-2 rounded-lg text-lg font-medium my-2"><img class="w-4 h-4" src="/images/calendar_black.png" alt="phone icon"><a href="booking:https://www.fresha.com/a/lavish-lux-nails-spa-markham-markham-3150-highway-7-u4om1v9h/all-offer?menu=true&dppub=true&rwg_token=AJKvS9WjdFsDcrf2R4QfersoGB6SQHw3OYvv7LQynvIuYLxbjnpQWxrEeN19qNYkdMgXBtvbE6v2prK0TT02y_NOUDKUgufKuA%3D%3D&gei=fkmBZq-YG7Gr4-EPnoiwqAw">Booking</a></button>
+          <button class="w-[190px] flex items-center gap-2 bg-[#fde0da] hover:bg-white border-2 border-[#9f6657] px-4 py-2 rounded-lg text-lg font-medium"><img class="w-4 h-4" src="/images/map_icon.png" alt="phone icon"><a href="location: https://maps.app.goo.gl/P78v4BEwPwFgScEo8">Mississauga</a></button>
+        </div>
+      </div>
+    </div>
+    <!-- 3 button sticky part end -->
+    <footer>
+      <!-- footer top  -->
+      <div class="footer__bg">
+        <div class="text-white  px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto py-[44px] md:py-[50px] lg:py-[55px] xl:py-[60px] 2xl:py-[70px] 3xl:py-[80px] 4xl:py-[90px] 5xl:py-[100px]">
+          <div class="flex justify-center items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="682" height="30" viewBox="0 0 682 30" fill="none">
+              <path d="M681.65 15L667.217 0.566243L652.783 15L667.217 29.4338L681.65 15ZM0 17.5L667.217 17.5V12.5L0 12.5L0 17.5Z" fill="#C7A43C"/>
+            </svg>
+            <img class="w-auto h-[70px] md:h-[80px] lg:h-[90px] xl:h-[100px] 2xl:h-[110px] px-10" src="/images/footer__logo.png" alt="footer logo">
+            <svg xmlns="http://www.w3.org/2000/svg" width="682" height="30" viewBox="0 0 682 30" fill="none">
+              <path d="M0.349609 15L14.7834 29.4338L29.2172 15L14.7834 0.566243L0.349609 15ZM682 12.5L14.7834 12.5V17.5L682 17.5V12.5Z" fill="#C7A43C"/>
+            </svg>
+          </div>
+          <p class="text-lg font-semibold text-center pb-[55px] pt-[22px]">Find the best nail salon in Mississauga for impeccable manicures & pedicures. Expert service & stunning results await! Book now.</p>
+          <div>
+            <div class="grid grid-cols-1 md:grid-cols-3  gap-10">
+              <div class="flex justify-center md:justify-start">
+                <div class="w-1/2 text-center md:text-left">
+                  <h5 class="text-2xl font-semibold pb-[28px]">Navigation</h5>
+                  <ul class="text-lg font-medium">
+                    <li>Blogs</li>
+                    <li class="py-[26px]">Contact Us</li>
+                    <li>Testimonial</li>
+                    <li class="py-[26px]">Gallery</li>
+                    <li>Sitemap</li>
+                  </ul>
+                </div>
+                <div class="w-1/2 hidden lg:block">
+                  <h5 class="text-2xl font-semibold pb-[28px]">Ours Services</h5>
+                  <ul class="text-lg font-medium">
+                    <li>Manicure</li>
+                    <li class="py-[26px]">Pedicure</li>
+                    <li>Waxing</li>
+                    <li class="py-[26px]">Design</li>
+                    <li>Artificial Nails</li>
+                    <li class="pt-[26px]">Additional Services</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="text-center md:text-left">
+                <h5 class="text-2xl font-semibold pb-[28px]">Contact Us</h5>
+                <p class="flex justify-center md:justify-start items-center gap-4 text-lg font-medium"><img src="/images/location.png" alt="location icon"> <a href="location : https://maps.app.goo.gl/P78v4BEwPwFgScEo8">1100 Burnhamthorpe Rd W Unit 16, <br class="block md:hidden"> Mississauga, ON L5C 4G4, Canada</a></p>
+                <p class="flex justify-center md:justify-start items-center gap-4 text-lg font-medium py-[26px]"> <img src="/images/phone.png" alt="phone icon"> <a href="tel : (905) 973-6669">(905) 973-6669</a></p>
+                <p class="flex justify-center md:justify-start items-center gap-4 text-lg font-medium"><img src="/images/email.png" alt="email icon"> <a href="email : manager@lavishluxnailsandspa.com">manager@lavishluxnailsandspa.com</a></p>
+              </div>
+              <div>
+                <div class="f__border py-[17px]">
+                  <h5 class="text-2xl font-medium text-center">Open Hours</h5>
+                <!-- <div class="pt-[12px] pb-[24px] px-5">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="280" height="24" viewBox="0 0 424 24" fill="none">
+                    <path d="M0.452994 12L12 23.547L23.547 12L12 0.452994L0.452994 12ZM423.547 12L412 0.452994L400.453 12L412 23.547L423.547 12ZM12 14H412V10H12V14Z" fill="#C7A43C"/>
+                  </svg>
+                  
+                </div> -->
+                <div class="w-[120px] md:w-[140px] lg:w-[160px] xl:w-[180px] 2xl:w-[200px] h-[3px] mx-auto bg-[#C7A43C] my-2"></div>
+                
+                <p class="text-lg font-medium text-center">Mon. ~ Fri. <br> 10:00am ~ 7:00pm <br> Sat. <br> 9:00am ~ 6:00pm <br> Sun. <br> 11:00am ~ 5:00pm</p>
+                </div>
+              </div>
+
+              <!-- small device  -->
+              <div class="block md:hidden">
+                <hr class="my-2 py-2"/>
+                <p class="text-center pb-2 text-base font-medium">© All Copyright 2024 by Lavish Lux Nail & Spa</p>
+                <p class="w-full flex justify-center text-base font-medium">
+                  <span class="pr-[100px] ">Terms & Condition </span>
+                  <span> Privacy Policy</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer bottom  -->
+       <div class="flex flex-col lg:flex-row  px-6 md:px-8 lg:px-24 xl:px-28 2xl:px-32 3xl:px-40 4xl:px-52 5xl:px-[285px] mx-auto bg-[#C7A43C] py-[10px] flex justify-between items-center text-white">
+         <p class="flex gap-2 items-center text-base font-semibold">WEBSITE DESIGN AND SEO BY :- <img src="/images/gokundu__logo.png" alt="gokundu__logo"></p>
+         <p class="text-base font-medium hidden md:block">© All Copyright 2024 by Lavish Lux Nail Spa</p>
+         <p class="flex justify-between items-center text-base font-medium hidden md:block"><span class="pr-10">Terms & Condition</span>   <span>Privacy Policy</span>    </p>
+       </div>
+    </footer>
 
       <!-- swiper js code  -->
   <script>
     const swiper = new Swiper(".swiper-container", {
         // slidesPerView: 3,
+        
         breakpoints:{
-                768: {
-                  slidesPerView: 1,
-                  spaceBetween: 10,
-                },
-                1024: {
-                  slidesPerView: 3,
-                  spaceBetween: 10,
-                },
-              },
+          0: {
+        slidesPerView: 1,
         spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+              },
+              spaceBetween: 20,
         loop: true,
 
         autoplay: {
@@ -831,5 +1571,92 @@ padding-top: 18px;
         },
       });
   </script>
+
+<!-- Why Choose Lavish Lux as Your Nail Salon in Mississauga? -->
+  <script>
+    const swiper2 = new Swiper(".swiper-container2", {
+        // slidesPerView: 3,
+        
+        breakpoints:{
+          0: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1440: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+              },
+              spaceBetween: 20,
+        loop: true,
+
+        autoplay: {
+          disableOnInteraction: true,
+          speed: 3000,
+        },
+
+        navigation: {
+          nextEl: ".custom-swiper-button-next",
+          prevEl: ".custom-swiper-button-prev",
+        },
+      });
+  </script>
+
+  <!-- faq section  -->
+  <script>
+    function toggleAccordion(section) {
+      const content = document.getElementById(`section${section}`);
+      const icon = content.previousElementSibling.querySelector('svg');
+      if (content.classList.contains('hidden')) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      } else {
+        content.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+      }
+    }
+  </script>
+
+  <!-- small device nav bar  -->
+  <script>
+    window.addEventListener('scroll', function() {
+      var scrollableContent = document.getElementById('scrollable-content');
+      if (window.scrollY > 50) {  // Change '50' to the scroll position you want
+        scrollableContent.style.display = 'none';
+      } else {
+        scrollableContent.style.display = 'block';
+      }
+    });
+  </script>
+
+  <!-- <script>
+    document.addEventListener('scroll', function() {
+      const elements = document.querySelectorAll('.hide-on-scroll');
+      const navContainer = document.getElementById('nav-container');
+      const isScrolled = window.scrollY > 0;
+      
+      elements.forEach(element => {
+        if (isScrolled) {
+          element.classList.add('hidden');
+        } else {
+          element.classList.remove('hidden');
+        }
+      });
+
+      if (isScrolled) {
+        navContainer.classList.add('padded');
+      } else {
+        navContainer.classList.remove('padded');
+      }
+    });
+  </script> -->
   </body>
 </html>

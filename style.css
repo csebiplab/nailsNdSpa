@@ -13,14 +13,12 @@
     padding: 1rem;
 } */
 
-
-
-body{
-    background: #FFF9E7;
+body {
+  background: #fff9e7;
 }
 
-.primary_color{
-    color: #C7A43C;
+.primary_color {
+  color: #c7a43c;
 }
 
 .swiper {
@@ -29,21 +27,27 @@ body{
 }
 
 /* <!-- The Lavish Lux Experience --> */
-.bg__lavish__lux{
+.bg__lavish__lux {
   border-radius: 80px;
-/* border-right: 1px solid #C7A43C;
+  /* border-right: 1px solid #C7A43C;
 border-left: 1px solid #C7A43C; */
-border: 1px solid #C7A43C;
+  border: 1px solid #c7a43c;
 }
 
-.swiperSlide2{
+.swiperSlide2 {
   border-radius: 30px;
-background: linear-gradient(180deg, rgba(217, 217, 217, 0.20) 0%, rgba(217, 217, 217, 0.35) 40%, rgba(217, 217, 217, 0.45) 60%, rgba(217, 217, 217, 0.55) 100%);
-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.2) 0%,
+    rgba(217, 217, 217, 0.35) 40%,
+    rgba(217, 217, 217, 0.45) 60%,
+    rgba(217, 217, 217, 0.55) 100%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
 }
 
-.book__appointment{
-  background-color: #A0153E;
+.book__appointment {
+  background-color: #a0153e;
   color: white;
   padding-top: 8px;
   padding-bottom: 10px;
@@ -52,24 +56,123 @@ box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
 }
 
+/* banner section  */
+.banner__bg {
+  background-image: url("/images/banner_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 
-
-
-
-
-
-.service__bg{
-  border-radius: 8px 8px 0px 0px;
-background: rgba(199, 164, 60, 0.80);
+  height: 80vh;
+}
+/* .banner_images {
+  background-image: url("/images/Header.png");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 50vh;
+  padding: 100px;
+} */
+.our__service__bg {
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.2) 0%,
+    rgba(217, 217, 217, 0.35) 40%,
+    rgba(217, 217, 217, 0.45) 60%,
+    rgba(217, 217, 217, 0.55) 100%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  /* padding: 20px; */
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+.review__cart {
+  border-radius: 30px;
+  background: linear-gradient(
+    180deg,
+    rgba(217, 217, 217, 0.2) 0%,
+    rgba(217, 217, 217, 0.35) 40%,
+    rgba(217, 217, 217, 0.45) 60%,
+    rgba(217, 217, 217, 0.55) 100%
+  );
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 12px;
 }
 
-.services__bg{
-  border-radius: 0px 0px 8px 8px;
-border: 1px solid #C7A43C;
-background: rgba(255, 255, 255, 0.50);
-padding-left: 20px;
-padding-right: 20px;
-padding-bottom: 27px;
-padding-top: 27px;
+/* faq section  */
+.faq_para_border {
+  border: 1px solid #c7a43c;
+  background: #fff;
+}
 
+.service__bg {
+  border-radius: 8px 8px 0px 0px;
+  background: rgba(199, 164, 60, 0.8);
+}
+
+.services__bg {
+  border-radius: 0px 0px 8px 8px;
+  border: 1px solid #c7a43c;
+  background: rgba(255, 255, 255, 0.5);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 27px;
+  padding-top: 27px;
+}
+
+/* footer section  */
+.footer__bg {
+  background-image: url("/images/Footer.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.f__border {
+  border-radius: 8px;
+  border: 4px solid #c7a43c;
+}
+
+/* contact us  */
+.contact__us {
+  border-radius: 0px 8px 8px 0px;
+  background: linear-gradient(
+    180deg,
+    rgba(199, 164, 60, 0.25) 0%,
+    rgba(199, 164, 60, 0.35) 40%,
+    rgba(199, 164, 60, 0.45) 60%,
+    rgba(199, 164, 60, 0.55) 100%
+  );
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.25);
+}
+.input__field {
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------------------------------------------------------- */
+
+/* Hero section */
+.hero-section {
+  width: 100%;
+  height: auto;
+  background-image: url("/images/hero-bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.hero-right {
+  width: 42%;
+}
+
+.hero-right .hero-main-image {
+  width: 100%;
+  object-fit: cover;
 }
